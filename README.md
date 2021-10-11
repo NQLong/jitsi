@@ -61,19 +61,19 @@ sudo /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
 ````
 
 # Authentication
-## insert /etc/prosody/conf.avail/<hostname>.cfg.lua after line 'VirtualHost "<hostname>"'
+## insert /etc/prosody/conf.avail/[hostname].cfg.lua after line 'VirtualHost "[hostname]"'
 ````
 authentication = "internal_plain"
 ````
 
-## insert bottom /etc/prosody/conf.avail/<hostname>.cfg.lua
+## insert bottom /etc/prosody/conf.avail/[hostname].cfg.lua
 ````
 VirtualHost \"guest.$(hostname -f)\"
     authentication = "anonymous"
     c2s_require_encryption = false
 ````
 
-## add anonymousdomain /etc/jitsi/meet/<hostname>-config.js
+## add anonymousdomain /etc/jitsi/meet/[hostname]-config.js
 ````
 var config = {
     hosts: {
@@ -105,7 +105,7 @@ systemctl restart jitsi-videobridge2
 
 
 # Turn setup
-## modify url in external services in /etc/prosody/conf.avail/<hostname>.cfg.lua
+## modify url in external services in /etc/prosody/conf.avail/[hostname].cfg.lua
 ````
 external_service_secret = "<turnserver-secretkey>";
 external_services = {
@@ -156,17 +156,17 @@ sudo apt-get install default-jre-headless ffmpeg curl alsa-utils icewm xdotool x
 ````
 
 ## install jibri
-#add jitsi repo (if wasnt added)
+add jitsi repo (if wasnt added)
 
 ````
 sudo curl https://download.jitsi.org/jitsi-key.gpg.key | sudo sh -c 'gpg --dearmor > /usr/share/keyrings/jitsi-keyring.gpg'
 sudo echo 'deb [signed-by=/usr/share/keyrings/jitsi-keyring.gpg] https://download.jitsi.org stable/' | sudo tee /etc/apt/sources.list.d/jitsi.list > /dev/null
 ````
-
+isntall jibri
 ````
 sudo apt update
 sudo apt install jibri
 sudo usermod -aG adm,audio,video,plugdev jibri
 ````
-
+# Config jibri
 

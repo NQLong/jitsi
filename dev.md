@@ -36,7 +36,7 @@ modify jitsi-meet's package.json
 
 ## run dev
 ````
-cd ~/Desktop/jitsi-meet
+cd ~/jitsi-meet
 export WEBPACK_DEV_SERVER_PROXY_TARGET=https://jitsi.elitelearning.vn
 npm install lib-jitsi-meet --force && make dev
 ````

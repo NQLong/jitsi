@@ -51,3 +51,6 @@ cd ~/jitsi-meet
 npm install lib-jitsi-meet --force && make
 ````
 
+## Error
+if came accross "System limit for number of file watchers reached"
+```echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p```

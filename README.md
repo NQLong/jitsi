@@ -63,7 +63,7 @@ sudo /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
 # Authentication
 ## insert /etc/prosody/conf.avail/[hostname].cfg.lua after line 'VirtualHost "[hostname]"'
 ````
-authentication = "internal_plain"
+    authentication = "internal_plain"
 ````
 
 ## insert bottom /etc/prosody/conf.avail/[hostname].cfg.lua

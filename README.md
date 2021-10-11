@@ -355,7 +355,7 @@ hiddenDomain: 'recorder.yourdomain.com',
 ````
 
 ## Setup account for jibri
-much match with the one use in jibir.conf
+must match with the one use in jibir.conf
 ````
 prosodyctl register jibri auth.<hostname> <password>
 prosodyctl register recorder recorder.<hostname> <password>

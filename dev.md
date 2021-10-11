@@ -36,7 +36,7 @@ modify jitsi-meet's package.json
 
 ## run dev
 ````
-cd ~/jitsi-meet
+cd ~/Desktop/jitsi-meet
 export WEBPACK_DEV_SERVER_PROXY_TARGET=https://jitsi.elitelearning.vn
 npm install lib-jitsi-meet --force && make dev
 ````
@@ -44,7 +44,8 @@ npm install lib-jitsi-meet --force && make dev
 
 ## product
 ### modify nginx root to jitsi-meet repository
-```root /home/vo.luan/jitsi-meet```
+```sed -i 's/\/usr\/share\/jitsi-meet/\/home\/vo.luan\/jitsi-meet/g' /etc/nginx/sites-available/jitsi.elitelearning.vn.conf```
+
 ### build
 ````
 cd ~/jitsi-meet
